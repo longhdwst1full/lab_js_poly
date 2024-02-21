@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            display: flex;
+            justify-content: space-between;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+
+    </ul>
+
+
+
+    <!-- ví dụ  -->
+    <div id="product" class="content">
+        <div class="content_iteam">
+            <p></p>
+            <h3></h3>
+
+            <p></p>
+        </div>
+        <!-- <div class="content_iteam">
+            <p></p>
+            <h3></h3>
+
+            <p></p>
+        </div> -->
+    </div>
+
+
+    <script>
+        const menuList = ["menu 1", "Menu 2", "menu 3"];
+        const menuELement = document.getElementById("menu");
+        if (menuELement) {
+            //  for (let i = 0; i < menuList.length; i++) {
+            //    menuELement.innerHTML+=`<li>${menuList[i]}<li>`
+
+            //  }
+
+            //for in 
+
+            // for(let i in menuList){
+            //     console.log(i);
+            //     menuELement.innerHTML+=`<li> ${menuList[i]}</li>`;
+            // }
+            // for (const iteam of menuList) {
+            //     console.log(iteam);
+            // }
+            menuList.forEach(function (value, index) {
+                console.log(value);
+                menuELement.innerHTML += `<li> ${value}</li>`
+            })
+
+
+            //map tạo mảng mới 
+            const result = menuList.map(function (iteam) {
+                return `<li> ${iteam}</li>`
+            })
+                .join("");
+            menuELement.innerHTML = result
+
+        }
+
+        const productList = [
+            {
+                id: 1,
+                name: "long",
+                price: 200
+            },
+            {
+                id: 2,
+                name: "ag",
+                price: 200
+            },
+            {
+                id: 3,
+                name: "ag",
+                price: 200
+            },
+            {
+                id: 4,
+                name: "lgfdshng",
+                price: 200
+            },
+        ];
+        var productElement = document.getElementById("product");
+        //         const info = productList.map(function (iteam) {
+        //             console.log(iteam);
+        //             return `<div id="product" class="content">
+        //                 <div class="content_iteam">
+                        //     <p>${iteam.id}</p>
+                        // <h3>${iteam.name}</h3>
+                        // <p>${iteam.price}</p>
+                        // </div>
+                        // </div>`
+        //         }).join("");
+        //         productElement.innerHTML = info;
+
+        const state = {
+            product_: []
+        };
+        function listProduct() {
+            state.product_ = productList;
+
+
+        }
+        function teamplate(s) {
+            // console.log(s);
+            return s.product_.map(function (iteam) {
+
+                return `<div id="product" class="content">
+                <div class="content_iteam">
+    <p>${iteam.id}</p>
+        <h3>${iteam.name}</h3>
+        <p>${iteam.price}</p>
+        </div>
+        </div>`
+            })
+                .join("");
+        }
+        function rendent() {
+            listProduct();
+            // console.log(state.product_);
+
+            productElement.innerHTML = teamplate(state);
+
+        }
+        console.log(state)
+        rendent();
+        // experssion funcion
+        const sum1 = function (a, b) {
+            return a + b;
+
+        }
+        console.log(sum2(3, 4));
+        //  arow funcion (viết tắt của expression funcion)
+        const sum2 = (a, b) => {
+            return a + b;
+        };
+        console.log(sum2(3, 4));
+    </script>
+</body>
+
+</html>
