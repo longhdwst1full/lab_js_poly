@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function thoigian() {
+
+
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDay();
+            var hourd = date.getHours();
+            var minis=date.getMinutes();
+           setTimeout("thoigian()",1000);
+           document.getElementById('time').innerHTML=minis+":"+hourd+":"+day+":"+month+":"+date;
+        }
+
+       
+    </script>
+</head>
+
+<body>
+   <button id="time"></button>
+    <script>
+thoigian();
+    </script>
+</body>
+
+</html>

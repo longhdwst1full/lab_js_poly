@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.content {}
+
+.content .nav {
+    min-width: 600px;
+
+}
+
+.nav .menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+/* button , textarea,label{
+    outline: none;
+    border: none;
+    background-color: unset;
+
+} */
+.menu li {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.menu li:hover {}
+
+.slide_img {
+    height: 500px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slide_img img {
+    height: 100%;
+}
+
+.slide_control {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide_control button {
+    padding: 5px 10px;
+    background-color: rgb(8, 255, 21);
+    color: #fff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+button+button {
+    margin-left: 8px;
+}
+
+.slide_number {
+    margin: 0px 15px;
+    padding: 0px 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    min-height: 100px;
+    background-color: aqua;
+    display: flex;
+    /* text-align: center; */
+    font-size: 18px;
+    justify-content: center;
+    /* align-self: center; */
+    /* flex-direction: column; */
+}
+
+.footer table {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer table tr {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.footer table td p {
+    padding: 5px;
+    margin-left: 20px;
+}
+
+
+
+.hidden {
+    display: none;
+
+}
+
+.active {
+    background-color: rgb(8, 255, 21);
+    color: #fff;
+    border: 1px solid gray;
+    /* display: block; */
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.block {
+    display: block;
+}
+
+
+/* giot hàng */
+.cart {
+    margin: 15px 0px;
+}
+
+.cart>table {
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.cart table, .cart table th, .cart table td {
+    border: 1px solid #868585;
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.cart table th, .cart table td {
+    text-align: center;
+    padding: 8px;
+}
+
+.cart table tr:nth-child(1) {
+    background-color: skyblue;
+}
+
+.cart table tr:last-child {
+    background-color: red;
+    color: #fff;
+}
+
+.cart tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.hang_hoa_left {
+    text-align: left;
+}
+
+select#mucgia {
+    margin: 0 auto;
+    display: flex;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 15%;
+    margin-bottom: 20px;
+}
+
+.cart table tr:last-child {
+    font-size: 22px;
+}
+
+.cart td input {
+    border: 1px solid #ccc;
+    outline: none;
+    width: 80%;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* form */
+.dang_ki {
+    width: 80%;
+    /* background-color: aqua; */
+}
+
+h1 {
+    text-align: center;
+    margin: 38px 0;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+
+.dang_ki{
+    width: 650px;
+    margin: 0 auto;
+}
+.dang_ki form.form_dk{
+    width: 100%;
+    margin: 0 auto;
+}
+.dang_ki.tab-pane.block {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form_dk >table {
+    width: 70%;
+  
+    margin: 0 auto;
+}
+.form_dk table tr td label{
+    margin-right: 20px;
+}
+.form_dk table tr td input[type="text"],.form_dk table select{
+    border: 1px solid gray;
+    width: 70%;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+/* margin-bottom: 10px; */
+}
+.form_dk tr td{
+    width:fit-content;
+}
+.form_dk tr td:first-child{
+    width: 20%;
+}
+.form_dk button {
+    text-align: center;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.form_dk button {
+    text-align: center;
+    margin: 20px 0px;
+}
+.form_dk tr td p{
+    margin: 10px;
+}

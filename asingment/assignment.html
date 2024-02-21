@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./image/anh1.png">
+        </div>
+   
+        <div class="content">
+            <div class="nav">
+                <ul class="menu">
+                    <li class="active">Slide Ảnh</li>
+                    <li>giỏ hàng</li>
+                    <li>Đăng kí</li>
+                </ul>
+            </div>
+            <div class="slider_anh tab-pane block">
+                <div class="slide_img">
+                    <img src="./image/bay-ky-quan-thien-nhien-the-gioi-moi.jpg" alt="">
+                </div>
+                <div class="slide_control">
+                    <button class="first">first</button>
+                    <button class="back">back</button>
+                    <button class="stop">stop</button>
+                    <u class="slide_number"> 1/6</u>
+                    <button class="start">start</button>
+                    <button class="next">next</button>
+                    <button class="final">final</button>
+                </div>
+            </div>
+
+            <!-- giỏ hàng -->
+            <div class="cart tab-pane">
+                <select name="doigia" onchange="doigia()" id="mucgia">
+                    <option value="">Chọn mức giá </option>
+                    <option value="200">Đến 200</option>
+                    <option value="400">Đến 400</option>
+                    <option value="600">Đến 600</option>
+                    <option value="800">Đến 800</option>
+                </select>
+                <table>
+                    <tr>
+                        <th>
+                            <input type="checkbox" name="chon">
+                        </th>
+                        <th>Hàng Hóa </th>
+                        <th>Hình ảnh</th>
+                        <th>Đơn giá </th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input onclick="_check(0)" type="checkbox" name="chon">
+                        </td>
+                        <td class="hang_hoa_left">IPhone 12pro</td>
+                        <td>
+                            <img src="https://ngayxuaoi.vn/wp-content/uploads/2021/11/cach-lay-lai-hinh-anh-tren-iphone-bi-mat-2.jpg"
+                                alt="">
+                        </td>
+                        <td name="price">700 </td>
+                        <td id="sl">
+                            <input onchange="thanhtien(this)" type="number" name="soluong" disabled>
+                        </td>
+                        <td name="thanhtien"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input onclick="_check(1)" type="checkbox" name="chon">
+                        </td>
+                        <td class="hang_hoa_left">Samsung Galaxy S11</td>
+                        <td>
+                            <img src="https://vnn-imgs-f.vgcloud.vn/2019/11/25/10/lo-anh-samsung-galaxy-s11.jpg" alt="">
+                        </td>
+                        <td name="price">400 </td>
+                        <td id="sl">
+                            <input onchange="thanhtien(this)" type="number" name="soluong" disabled>
+                        </td>
+                        <td name="thanhtien"></td>
+                    </tr>
+                    <tr>
+                        <td><input onclick="_check(2)" type="checkbox" name="chon"></td>
+                        <td class="hang_hoa_left">Nokia 8.1 Plus</td>
+                        <td>
+                            <img src="https://media1.nguoiduatin.vn/media/trng-le-quc-tun/2019/01/10/nokia-81-plus-1.png"
+                                alt="">
+                        </td>
+                        <td name="price">100 </td>
+                        <td id="sl">
+                            <input onchange="thanhtien(this)" type="number" name="soluong" disabled>
+                        </td>
+                        <td name="thanhtien"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input onclick="_check(3)" type="checkbox" name="chon">
+                        </td>
+                        <td class="hang_hoa_left"> Xiaomi Redmi Note 5</td>
+                        <td>
+                            <img src="https://cdn.trangcongnghe.vn/uploads/posts/2018-01/hinh-anh-man-nhan-xiaomi-redmi-note-5-voi-man-hinh-tran-vien-camera-kep_1.jpg"
+                                alt="">
+                        </td>
+                        <td name="price">450 </td>
+                        <td id="sl">
+                            <input onchange="thanhtien(this)" type="number" name="soluong" disabled>
+                        </td>
+                        <td name="thanhtien"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input onclick="_check(4)" type="checkbox" name="chon">
+                        </td>
+                        <td class="hang_hoa_left">Bphone A85</td>
+                        <td>
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/256229/bphone-a85-5g-291021-022350-600x600.jpg"
+                                alt="">
+                        </td>
+                        <td name="price">180 </td>
+                        <td id="sl">
+                            <input onchange="thanhtien(this)" type="number" name="soluong" disabled>
+                        </td>
+                        <td name="thanhtien"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input onclick="_check(5)" type="checkbox" name="chon">
+                        </td>
+                        <td class="hang_hoa_left">
+
+                            OPPO A12s
+                        </td>
+                        <td>
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/225964/oppo-a12s-600-600x600.jpg" alt="">
+                        </td>
+                        <td name="price">600 </td>
+                        <td id="sl">
+                            <input onchange="thanhtien(this)" type="number" name="soluong" disabled>
+                        </td>
+                        <td name="thanhtien"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input onclick="_check(6)" type="checkbox" name="chon">
+                        </td>
+                        <td class="hang_hoa_left">Sony Xperia 1
+                        </td>
+                        <td>
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/195747/sony-xperia-1-600x600.jpg" alt="">
+                        </td>
+                        <td name="price">90 </td>
+                        <td id="sl">
+                            <input onchange="thanhtien(this)" type="number" name="soluong" disabled>
+                        </td>
+                        <td name="thanhtien"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Tổng</td>
+                        <td id="tong" tongtien()>
+                            <span>0</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Đăng kí -->
+            <div class="dang_ki tab-pane ">
+
+
+                <h1 id="dangKiHoc">Đăng kí khóa học</h1>
+
+                <form action="" onsubmit="return validate();" class="form_dk">
+                    <table>
+                        <tr>
+                            <td><label for="">Họ tên </label></td>
+                            <td>
+                                <input type="text" id="hoten" name="hoten" value="">
+                        <tr>
+                            <td></td>
+                            <td>
+                                <p id="errol_hoten"></p>
+                            </td>
+                        </tr>
+
+                        </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="">Email</label> </label></td>
+                            <td>
+                                <input type="text" id="email" name="email" value="">
+                        <tr>
+                            <td></td>
+                            <td>
+                                <p id="errol_email" id=""></p>
+                            </td>
+                        </tr>
+
+                        </td>
+
+                        </tr>
+                        <tr>
+                            <td><label for="">Số điện thoại </label></td>
+                            <td>
+                                <input type="text" id="phone" name="phone" value="">
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <p id="errol_phone"></p>
+                            </td>
+                        </tr>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Khóa học</label>
+                            </td>
+                            <td>
+                                <select name="" id="courses">
+                                    <option value="">Chọn khóa học</option>
+                                    <option value="html">Khóa HTML</option>
+                                    <option value="javascript">Khóa JavaScript</option>
+                                    <option value="php">Khóa PHP</option>
+                                </select>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <p id="errol_courses"></p>
+                            </td>
+                        </tr>
+
+                        </td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Học phí </label></td>
+                            <td>
+                                <input type="text" id="free_course" name="free_course" value="00000">
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <p id="errol_free_course"></p>
+                            </td>
+                        </tr>
+                        </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <label for="">Hình thức học </label>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td colspan="">
+                                            <input type="radio" name="chon_dđ" value="Tại trường">
+                                            Tại trường
+                                        </td>
+                                        <td> </td>
+                                        <td>
+                                            <input type="radio" name="chon_dđ" value="Học online">   Học online
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <p id="errol_chon"></p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td colspan="4" style="text-align:center"><button>Đăng kí</button></td>
+                        </tr>
+
+
+                    </table>
+
+                </form>
+
+
+
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <table>
+                <tr>
+                    <td>Họ và tên :</td>
+                    <td>
+                        <p class="footer_name">Hoàng Đình Long</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MSSV: </td>
+                    <td>
+                        <p class="footer_masv"> PH28352</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lớp :</td>
+                    <td>
+                        <p class="class"> IT17303</p>
+                    </td>
+                </tr>
+            </table>
+
+
+
+        </div>
+    </div>
+
+    <script src="./asm1.js"></script>
+</body>
+
+</html>
