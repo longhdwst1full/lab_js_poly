@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tagert {
+            width: 60px;
+            height: 60px;
+            background-color: #33691E;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tagert">
+
+    </div>
+    <!-- b1 -->
+    <script>
+        var tagert = document.getElementById("tagert");
+        tagert.onmouseover = function () {
+            tagert.style.backgroundColor = "#BF360C"
+
+        }
+        tagert.onmouseout = function () {
+            tagert.style.backgroundColor = "#33691E";
+        }
+
+    </script>
+    <input type="text" value="" id="txtinput">
+    <!-- b2 -->
+    <h3>InputText</h3>
+
+    <script>
+
+        let inputElement = document.querySelector('input');
+        const color_value = inputElement.value;
+        let txtH3 = document.querySelector("h3");
+        inputElement.setAttribute("name", "#33691E");
+        console.log(inputElement.getAttribute("name"));
+        inputElement.onkeyup = function () {
+            txtH3.innerHTML = inputElement.value;
+            txtH3.style.color = inputElement.getAttribute("name")
+        }
+//         if(inputElement.value.length>0){
+//         console.log(inputElement.value.innerHTML);
+// }
+    </script>
+    <!-- bài lab1 bài 3 -->
+    <style>
+        .user_iteam {
+            color: green;
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
+    </style>
+    <ul id="target">
+
+    </ul>
+    <script>
+        var uesers = [
+            {
+                id: 1, name: "James smith", gender: 1
+            },
+            {
+                id: 2, name: "Isla Brown", gender: 2
+            },
+            {
+                id: 3, name: "Amelia Davies", gender: 1
+            },
+            {
+                id: 4, name: "Jacib Evans", gender: 2
+            }
+        ];
+
+        var tagert = document.getElementById("tagert");
+        uesers.forEach(function (value, index) {
+           
+            target.innerHTML += `<li class="user_iteam">${value.id}-${value.name}-${value.gender}</li>`
+        })
+    </script>
+
+
+    <!-- bài 4 -->
+    <div class="form-group">
+        <div><label for="">ID</label>
+            <input type="number" name="" id="addUserId" value="">
+        </div>
+
+        <div><label for="">Name</label>
+            <input type="text" name="" id="addUserText" value="">
+        </div>
+        <div><label for="">Gender</label>
+            <select name="" id="addUserGender" value="">
+                <option value="1">male</option>
+                <option value="2">female</option>
+            </select>
+        </div>
+        <div>
+            <button type="button" id="addAction">
+                Add
+            </button>
+        </div>
+
+    </div>
+    <ul id="tittle">
+
+    </ul>
+    <script>
+var tittle = document.getElementById("tittle");
+        uesers.forEach(function (value, index) {
+           
+            tittle.innerHTML += `<li class="user_iteam">${value.id}-${value.name}-${value.gender}</li>`
+        })
+    </script>
+</body>
+
+</html>

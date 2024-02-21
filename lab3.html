@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sinhvien(id, fullname, email, avatar, address, study_major, avgScore) {
+            this.id = id,
+                this.fullname = fullname,
+                this.eamil = email,
+                this.avatar = avatar,
+                this.address = address,
+                this.study_major = study_major,
+                this.avgScore = avgScore,
+                this.getAVgScore = function () {
+
+                },
+                this.setAvgScore = function (point) {
+
+                },
+                this.changeAddress = function (address) {
+
+                }
+        }
+        var sv1 = new sinhvien(1, "hoàng đình long", "long@email.com", "avatar", "thanh hóa", "Học sinh", 8);
+        console.log(sv1)
+    </script>
+    <div>
+        <label for=""> Subject Name</label>
+        <input type="text" name="" id="name">
+    </div>
+
+    <div>
+
+        <label for="">Point</label>
+        <input type="text" name="" id="point">
+    </div>
+
+    <button>Add</button>
+    <div class="hiden">
+
+    </div>
+
+    <script>
+        let inputName = document.querySelector("#name");
+        let inputPoints = document.querySelector("#point");
+
+        let btnSubmit = document.querySelector("button");
+        const hidene = document.querySelector(".hiden")
+
+        var student = {
+            name: "Nguyễn văn A",
+            age: 18,
+            address: "Hà nội ",
+            subject: []
+        }
+
+        var arrr1 = { name: "", points: "" };
+        inputName.addEventListener("change", function (e) {
+            arrr1.name = e.target.value
+        })
+        inputPoints.addEventListener("change", function (e) {
+            arrr1.point = e.target.value
+        })
+        btnSubmit.addEventListener("click", function () {
+
+
+            student.subject.push(arrr1);
+            console.log(student.subject)
+            let hide = `<p id="student_name">${student.name}</p>
+                <p id="student_age">${student.age}</p>
+                <p id="student_address">${student.address}</p>
+                <p>Subject:</p>
+                <ul id="subject">
+                <li>${student.subject[0].name}-${student.subject[0].point}</li>
+                </ul>`
+            hidene.innerHTML = hide
+        });
+
+
+
+    </script>
+    <script>
+        function student1(name, age, address, phone, birthday) {
+            this.name = name,
+                this.age = age,
+                this.address = address,
+                this.phone = phone,
+                this.birthday = birthday,
+                this.subject = [
+                    {
+
+                        name: name,
+                        teacher: teacher,
+                        points: points,
+                        year: year
+
+                    }
+                ]
+        }
+        var StudentPoly  = new student1("long", 18, "hà nội", "086525762", "15/2/2002");
+
+    </script>
+</body>
+
+</html>
